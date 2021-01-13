@@ -1,0 +1,52 @@
+@import 'styles/shared.scss';
+
+.TodoForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  border: 2px solid $accent;
+  border-radius: 4px;
+}
+
+.TodoForm__field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.TodoForm__label {
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: $secondary-accent;
+}
+
+.TodoForm__input {
+  padding: 5px 10px;
+  font-weight: 500;
+  color: $accent-text;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $secondary-accent;
+  border-radius: 2px;
+
+  &:focus {
+    background-color: #ffbdaf2b;
+    border-bottom: 2px solid $secondary-accent;
+  }
+}
+
+.TodoForm__btn {
+  @extend %button;
+
+  width: 50%;
+  align-self: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  color: $white;
+  background-color: $accent;
+}
