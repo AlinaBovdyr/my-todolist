@@ -9,4 +9,27 @@
   font: inherit;
   cursor: pointer;
   outline: none;
+  align-self: center;
+
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  background-color: $accent;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-accent;
+  }
+
+  &:active {
+    background-color: #69edce;
+  }
+}
+
+%frame {
+  border: 1px solid $accent;
+  border-radius: 4px;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }

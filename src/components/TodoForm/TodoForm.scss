@@ -1,40 +1,48 @@
 @import 'styles/shared.scss';
 
 .TodoForm {
+  @extend %frame;
+
   display: flex;
   flex-direction: column;
   padding: 20px;
-
-  border: 2px solid $accent;
-  border-radius: 4px;
+  margin-bottom: 50px;
 }
 
 .TodoForm__field {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .TodoForm__label {
   margin-bottom: 5px;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: $secondary-accent;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .TodoForm__input {
   padding: 5px 10px;
+  min-height: 30px;
   font-weight: 500;
   color: $accent-text;
   outline: none;
   border: none;
   border-bottom: 1px solid $secondary-accent;
   border-radius: 2px;
+  resize: vertical;
+  overflow: auto;
+  font-size: 14px;
 
   &:focus {
-    background-color: #ffbdaf2b;
+    background-color: $bg-accent;
     border-bottom: 2px solid $secondary-accent;
   }
 }
@@ -42,11 +50,10 @@
 .TodoForm__btn {
   @extend %button;
 
-  width: 50%;
-  align-self: center;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-weight: 500;
-  color: $white;
-  background-color: $accent;
+  padding: 10px 15px;
+  max-width: 160px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
 }

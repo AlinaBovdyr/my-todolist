@@ -4,7 +4,6 @@
   margin-right: auto;
   margin-left: auto;
   padding: 60px 15px;
-  outline: auto;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
@@ -25,4 +24,6 @@
   text-transform: uppercase;
   text-align: center;
   color: $accent-text;
+  font-weight: 800;
+  font-size: 28px;
 }

@@ -27,12 +27,14 @@ export default class TodoForm extends Component {
       <form className="TodoForm" onSubmit={this.handleSubmit}>
         <label className="TodoForm__field">
           <span className="TodoForm__label">Что должно быть сделано?</span>
-          <input
+          <textarea
             className="TodoForm__input"
             type="text"
             value={text}
             onChange={this.handleChange}
-          />
+            rows="1"
+            required
+          ></textarea>
         </label>
         <button className="TodoForm__btn" type="submit">
           Добавить задачу
